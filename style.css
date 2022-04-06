@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+header {
+    background-color: #f16775
+    
+}
+
+body {
+    background: #c8b7a6;
+    font-family: "Architects Daughter";
+    font-size: 22px;
+}
+
+li { 
+    list-style: none;
+    
+
+}
+
+a {
+    color:azure;
+    text-decoration: none;
+    margin-left: 12px;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+
+}
+
+.nav-branding {
+    font-size: 2rem;
+}
+
+.nav-link {
+    transition: 0.7s ease;
+}
+.nav-link:hover {
+    color: purple;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color:white;
+}
+.main-container {
+    width: 95%;
+    margin: auto;
+
+}
+
+.container1 {
+    margin-left: 2%;
+    margin-top: 2%;
+
+
+}
+
+.container2 {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 16px;
+    margin-left: 5%;
+
+    
+}
+.container3 {
+    display: none;
+   position: absolute;
+    top: 26%;
+    left: 10%;
+
+}
+
+textarea {
+    box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+    outline: none;
+    width: 175px;
+    height: 175px;
+    padding: 40px 25px 25px 25px;
+    }
+svg{
+    color: #fba92c
+}
+#check-icon {
+    position: absolute;
+    right: 17%;
+    top: 4%;
+
+}
+#x-icon {
+    position: absolute;
+    right: 5%;
+    top:4%;
+
+}
+@media(max-width:768px) {
+    .hamburger {
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #f16775;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .nav-item {
+        margin: 16px 0;
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+   
+}
